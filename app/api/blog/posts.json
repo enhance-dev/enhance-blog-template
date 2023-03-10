@@ -1,0 +1,53 @@
+[
+  {
+    "href": "/blog/posts/2023-02-23-enhancing-fwas-with-web-components",
+    "frontmatter": {
+      "title": "Enhancing FWAs with web components with Brian LeRoux",
+      "image": "/_public/blog/post-assets/podrocket.jpg",
+      "category": "FWA, web components, web development",
+      "description": "Brian jumps on PodRocket to talk about their conference talk, “Enhance your functional web apps with web components” from last year’s CascadiaJS conference.",
+      "author": "Brian LeRoux",
+      "avatar": "brian.jpg",
+      "twitter": "brianleroux",
+      "mastodon": "@brianleroux@indieweb.social",
+      "published": "February 23, 2023",
+      "readtime": "32 mins",
+      "thumbnail": "/_public/blog/thumbnails/post-assets/podrocket.jpg"
+    }
+  },
+  {
+    "href": "/blog/posts/2023-02-28-redefining-developer-experience",
+    "frontmatter": {
+      "title": "Redefining Developer Experience",
+      "image": "/_public/blog/post-assets/cole-dev-ex/analogue-life-japanese-scissors.jpg",
+      "image_alt": "Three pairs of rustic looking Japanese scissors laying on a piece of light grey cloth",
+      "photographer": "Analogue Life",
+      "photographer_url": "https://www.analoguelife.com/en/products/tajika-household-scissors",
+      "category": "uncategorized",
+      "description": "For years now, the most popular JS frameworks have carried out intense marketing initiatives based on the premise of improving developer experience (DX). What is it about these promises of great DX that is consistently delivering poor user experiences? Can we change our approach to DX for the betterment of end users?",
+      "author": "Cole Peters",
+      "avatar": "cole.jpg",
+      "mastodon": "@colepeters@mastodon.online",
+      "published": "February 28, 2023",
+      "readtime": "22 mins",
+      "thumbnail": "/_public/blog/thumbnails/post-assets/cole-dev-ex/analogue-life-japanese-scissors.jpg"
+    }
+  },
+  {
+    "href": "/blog/posts/2023-03-08-enhance-api-routes-and-openapi",
+    "frontmatter": {
+      "title": "Enhance API Routes and OpenAPI",
+      "image": "/_public/blog/post-assets/axol-and-openapi.png",
+      "image_alt": "Axol and OpenAPI",
+      "category": "enhance, OpenAPI",
+      "description": "Documenting Enhance API's with OpenAPI.",
+      "author": "Simon MacDonald",
+      "avatar": "simon.png",
+      "twitter": "macdonst",
+      "mastodon": "@macdonst@mastodon.online",
+      "published": "March 8, 2023",
+      "readtime": "5 mins",
+      "thumbnail": "/_public/blog/thumbnails/post-assets/axol-and-openapi.png"
+    }
+  }
+]
