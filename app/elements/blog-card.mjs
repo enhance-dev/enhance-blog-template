@@ -8,7 +8,6 @@ export default function BlogPost({ html, state }) {
     <style>
       :host {
         display: block;
-        background-color: white;
       }
 
       .avatar {
@@ -17,13 +16,11 @@ export default function BlogPost({ html, state }) {
       }
     </style>
     <a href="${href}" class="no-underline">
-      <article
-        class="p0-md p2-lg grid gap2-md items-center-md col-3-md col-5-xl"
-      >
-        <div class="p0 p-none-md col-span-2-md col-span-3-xl">
-          <h1 class="font-serif leading1 text1 text2-md mb0">${title}</h1>
-          <p class="mb0 mb2-md">${description}</p>
-          <p class="text-1 tracking1 mb0 mb2-lg description">${readtime} to read</p>
+      <article class="p0 p4-lg">
+        <div class="font-sans leading3">
+          <h1 class="font-serif font-bold leading1 text2 text3-lg mb0">${title}</h1>
+          <p class="mb0">${description}</p>
+          <p class="text-1 tracking1">${readtime} to read</p>
         </div>
       </article>
     </a>

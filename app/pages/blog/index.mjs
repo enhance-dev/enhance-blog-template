@@ -4,16 +4,7 @@ export default function ({ html, state }) {
   const { limit, offset, total } = store
 
   return html`
-    <style>
-      main {
-        background: var(--light);
-      }
-
-      .navOffset {
-        margin-top: var(--nav-height);
-      }
-    </style>
-    <main class="font-sans leading3 navOffset">
+    <main class="pt0 pt4-lg pb0 pb4-lg">
       <blog-container>
         <blog-posts></blog-posts>
         <blog-pagination

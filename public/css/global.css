@@ -1,0 +1,36 @@
+html {
+  background: var(--light);
+  color: var(--dark);
+}
+
+blockquote {
+  border-width: 1px 1px 1px 4px;
+  border-style: solid;
+  border-color: var(--dark-fade);
+}
+
+pre {
+  background: #fff;
+  padding: 0.5rem 1rem;
+}
+
+code {
+  font-family: 'IBM Plex Mono', 'Fira Mono', 'Source Code Pro', Menlo, Monaco, monospace;
+  font-size: 0.9em;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: var(--dark);
+    color: var(--light-fade);
+  }
+
+  blockquote {
+    border-color: var(--light);
+  }
+
+  pre {
+    background: #333;
+  }
+}
+
