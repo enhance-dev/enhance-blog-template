@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs'
 import { URL } from 'url'
 import { Arcdown } from 'arcdown'
-import HljsLineWrapper from '../../../lib/hljs-line-wrapper.mjs'
-import { default as defaultClassMapping } from '../../../lib/markdown-class-mappings.mjs'
+import HljsLineWrapper from '../../lib/hljs-line-wrapper.mjs'
+import { default as defaultClassMapping } from '../../lib/markdown-class-mappings.mjs'
 
 /** @type {import('@enhance/types').EnhanceApiFn} */
 export async function get(req) {
@@ -28,12 +28,15 @@ export async function get(req) {
     docPath += 'index' // trailing slash == index.md file
   }
 
-  const docURL = new URL(`../../../blog/${docPath}.md`, import.meta.url)
+  const docURL = new URL(`../../blog/${docPath}.md`, import.meta.url)
+
+  console.log(docURL)
 
   let docMarkdown
   try {
     docMarkdown = readFileSync(docURL.pathname, 'utf-8')
   } catch (_err) {
+    console.log(_err)
     return { statusCode: 404 }
   }
   const post = await arcdown.render(docMarkdown)

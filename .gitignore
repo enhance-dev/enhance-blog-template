@@ -146,6 +146,6 @@ dist
 .pnp.*
 
 # Ignore generated files
-app/api/blog/posts.json
-app/api/blog/rss.br
-app/api/blog/rss.xml
+app/api/posts.json
+app/api/rss.br
+app/api/rss.xml

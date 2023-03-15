@@ -18,7 +18,8 @@ async function generate () {
 
   const posts = await readdir(base)
 
-  const hostname = getHostname(process.argv.slice(2))
+  const hostname = getHostname(process.env.BLOG_TEMPLATE_URL)
+  console.log(hostname)
 
   async function render(path) {
     const file = await readFile(`${base}/${path}`, 'utf8')
@@ -76,9 +77,9 @@ async function generate () {
   }
 
   let feedXml = feed.rss2()
-  let rssFeed = join(__dirname, '..', '..', 'app', 'api', 'blog', 'rss.xml')
+  let rssFeed = join(__dirname, '..', '..', 'app', 'api', 'rss.xml')
   await writeFile(rssFeed, feedXml)
-  let rssBrotli = join(__dirname, '..', '..', 'app', 'api', 'blog', 'rss.br')
+  let rssBrotli = join(__dirname, '..', '..', 'app', 'api', 'rss.br')
   await writeFile(rssBrotli, Buffer.from(brotliCompressSync(feedXml)).toString('base64'))
 }
 

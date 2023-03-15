@@ -23,7 +23,7 @@ async function generate () {
     // frontmatter.image = frontmatter.image
     frontmatter.thumbnail = frontmatter.image.replace('/_public/blog', '/_public/blog/thumbnails')
     return {
-      href: `/blog/posts/${parse(filePath).name}`,
+      href: `/posts/${parse(filePath).name}`,
       frontmatter
     }
   }
@@ -34,7 +34,7 @@ async function generate () {
     cards.push(card)
   }
 
-  let postsJson = join(__dirname, '..', '..', 'app', 'api', 'blog', 'posts.json')
+  let postsJson = join(__dirname, '..', '..', 'app', 'api', 'posts.json')
   await writeFile(postsJson, JSON.stringify(cards, null, 2))
 }
 
