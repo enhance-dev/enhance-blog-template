@@ -2,6 +2,8 @@
   "name": "enhance-blog-template",
   "version": "0.0.1",
   "scripts": {
+    "posts": "node ./src/plugins/create-post-metadata.js",
+    "rss": "node ./src/plugins/create-rss-feed.js",
     "start": "begin dev",
     "lint": "eslint ./app/**/*.mjs --fix"
   },
@@ -29,6 +31,7 @@
   "dependencies": {
     "@enhance/arc-plugin-enhance": "^5.0.1",
     "arcdown": "^2.1.0",
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "reading-time": "^1.5.0"
   }
