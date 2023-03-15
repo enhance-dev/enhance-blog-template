@@ -6,10 +6,7 @@ export default function ({ html, state }) {
   const { published = '', title = '' } = frontmatter
 
   return html`
-    <link rel="stylesheet" href="/_public/css/docs-highlight.css" />
-
     <site-header></site-header>
-
     <blog-container>
       <article
         class="font-body leading4 m-auto p0 p2-sm p4-md p5-lg p6-xl"
@@ -21,5 +18,6 @@ export default function ({ html, state }) {
         <section slot="doc">${post.html}</section>
       </article>
     </blog-container>
+    <site-footer></site-footer>
   `
 }

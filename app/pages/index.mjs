@@ -16,5 +16,6 @@ export default function ({ html, state }) {
         ></blog-pagination>
       </blog-container>
     </main>
+    <site-footer></site-footer>
   `
 }

@@ -22,10 +22,6 @@ html {
   color: var(--dark);
 }
 
-body {
-  padding-bottom: 4rem;
-}
-
 blockquote {
   border-width: 1px 1px 1px 4px;
   border-style: solid;
