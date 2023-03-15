@@ -30,8 +30,6 @@ export async function get(req) {
 
   const docURL = new URL(`../../blog/${docPath}.md`, import.meta.url)
 
-  console.log(docURL)
-
   let docMarkdown
   try {
     docMarkdown = readFileSync(docURL.pathname, 'utf-8')

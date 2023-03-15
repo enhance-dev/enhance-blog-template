@@ -19,7 +19,6 @@ async function generate () {
   const posts = await readdir(base)
 
   const hostname = getHostname(process.env.BLOG_TEMPLATE_URL)
-  console.log(hostname)
 
   async function render(path) {
     const file = await readFile(`${base}/${path}`, 'utf8')
