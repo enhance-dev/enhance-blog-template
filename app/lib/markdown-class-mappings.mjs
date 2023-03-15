@@ -1,7 +1,7 @@
 export default {
-  h2: ['font-serif', 'font-bold', 'mb0', 'mt4', 'text2', 'text4-lg', 'leading1'],
-  h3: ['font-serif', 'font-bold', 'mb0', 'mt4', 'text1', 'text2-lg', 'leading1'],
-  h4: ['font-serif', 'font-bold', 'mb0', 'mt4', 'text0', 'leading1'],
+  h2: ['font-heading', 'tracking-1', 'font-bold', 'mb0', 'mt4', 'text2', 'text4-lg', 'leading1'],
+  h3: ['font-heading', 'tracking-1', 'font-bold', 'mb0', 'mt4', 'text1', 'text2-lg', 'leading1'],
+  h4: ['font-heading', 'tracking-1', 'font-bold', 'mb0', 'mt4', 'text0', 'leading1'],
   p: ['mt-1', 'mb0'],
   ol: ['mt2', 'mb2', 'ml6'],
   ul: ['mt2', 'mb2', 'ml6'],

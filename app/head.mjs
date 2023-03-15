@@ -9,6 +9,7 @@ export default function Head() {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         ${getLinkTag()}
         <link rel='stylesheet' href='/_public/css/global.css' />
+        <link rel='stylesheet' href='https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/a11y-dark.min.css' />
       </head>
   `
 }

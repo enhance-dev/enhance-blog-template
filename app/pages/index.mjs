@@ -4,7 +4,8 @@ export default function ({ html, state }) {
   const { limit, offset, total } = store
 
   return html`
-    <main class="pt0 pt4-lg pb0 pb4-lg">
+    <site-header></site-header>
+    <main>
       <blog-container>
         <blog-posts></blog-posts>
         <blog-pagination

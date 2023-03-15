@@ -2,7 +2,7 @@ export default function BlogPost({ html, state }) {
   const { attrs, store } = state
   const { key } = attrs
   const { href, frontmatter } = store.posts[key]
-  const { description, readtime, title } =
+  const { description, published, readtime, title } =
     frontmatter
   return html`
     <style>
@@ -17,10 +17,13 @@ export default function BlogPost({ html, state }) {
     </style>
     <a href="${href}" class="no-underline">
       <article class="p0 p4-lg">
-        <div class="font-sans leading3">
-          <h1 class="font-serif font-bold leading1 text2 text3-lg mb0">${title}</h1>
+        <div class="font-body leading3">
+          <h1 class="font-heading font-bold leading1 text2 text3-lg tracking-1 mb0">${title}</h1>
           <p class="mb0">${description}</p>
-          <p class="text-1 tracking1">${readtime} to read</p>
+          <p class="text-1 tracking1">
+            ${published}<br />
+            ${readtime} to read
+          </p>
         </div>
       </article>
     </a>
