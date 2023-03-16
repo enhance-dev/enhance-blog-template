@@ -20,8 +20,6 @@ async function generate () {
 
   async function getData (filePath) {
     const frontmatter = await render(filePath)
-    // frontmatter.image = frontmatter.image
-    frontmatter.thumbnail = frontmatter.image.replace('/_public/blog', '/_public/blog/thumbnails')
     return {
       href: `/posts/${parse(filePath).name}`,
       frontmatter
