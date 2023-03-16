@@ -4,6 +4,27 @@
 
 This is the repo containing the blog template project using Enhance.
 
+```
+app
+├── api ............... data routes
+│   ├── posts
+│   │   └── $$.mjs .... load data for individual blog post
+│   └── index.mjs ..... list of blog posts
+├── blog
+│   └── posts ......... post files in markdown format
+│       └── *.md
+├── elements .......... custom element pure functions
+│   └── *.mjs
+├── lib
+│   ├── hljs-line-wrapper.mjs
+│   └── markdown-class-mappings.mjs
+├── pages ............. file-based routing
+│   ├── posts
+│   │   └── $$.mjs .... individual blog post
+│   └── index.mjs ..... list of blog posts
+└── head.mjs .......... head tag for each page
+```
+
 ## Quick Start
 
 - [Install the Begin CLI](https://begin.com/docs/)
