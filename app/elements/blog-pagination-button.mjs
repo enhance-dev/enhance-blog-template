@@ -1,4 +1,4 @@
-export default function BlogPagination({ html, state }) {
+export default function BlogPaginationButton({ html, state }) {
   const { attrs, store } = state
   const { limit = 20 } = store
   const { index, label } = attrs
@@ -11,7 +11,7 @@ export default function BlogPagination({ html, state }) {
     <style>
       .active {
         color: var(--light);
-        background-color: var(--red);
+        background-color: var(--dark);
       }
     </style>
     <li
@@ -23,12 +23,13 @@ export default function BlogPagination({ html, state }) {
          leading5
          pt-2
          pb-2
+         m0
         "
     >
       ${!active
     ? `<a
              class="no-underline pl-1 pr-1"
-             href="/blog?offset=${parseInt(index, 10) * limit}&limit=${limit}"
+             href="/?offset=${parseInt(index, 10) * limit}&limit=${limit}"
            >
             ${label}
           </a>`

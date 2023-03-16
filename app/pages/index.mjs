@@ -4,9 +4,8 @@ export default function ({ html, state }) {
   const { limit, offset, total } = store
 
   return html`
-    <site-header></site-header>
-    <main>
-      <blog-container>
+    <site-layout>
+      <main>
         <blog-posts></blog-posts>
         <blog-pagination
           limit="${limit}"
@@ -14,8 +13,7 @@ export default function ({ html, state }) {
           total="${total}"
           class="pb3 pb5-md"
         ></blog-pagination>
-      </blog-container>
-    </main>
-    <site-footer></site-footer>
+      </main>
+    </site-layout>
   `
 }

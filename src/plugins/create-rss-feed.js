@@ -50,7 +50,7 @@ async function generate () {
   )
 
   const feed = new Feed({
-    title: 'My Blog Title',
+    title: 'Enhance Blog Template',
     description: "My blog description.",
     id: hostname,
     link: hostname,
