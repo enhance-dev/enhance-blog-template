@@ -23,19 +23,19 @@ export default function BlogPagination({ html, state }) {
     )
 
   const prevButton = currentIndex !== 0
-    ? `<blog-pagination-button class="mr-auto mr-0-md" index="${currentIndex - 1}" label="‹ Prev"></blog-pagination-button>`
+    ? `<blog-pagination-button class="mr-auto mr-0-lg" index="${currentIndex - 1}" label="‹ Prev"></blog-pagination-button>`
     : ''
 
   const nextButton = currentIndex + 1 !== totalPages
-    ? `<blog-pagination-button class="ml-auto ml-0-md" index="${currentIndex + 1}" label="Next ›"></blog-pagination-button>`
+    ? `<blog-pagination-button class="ml-auto ml-0-lg" index="${currentIndex + 1}" label="Next ›"></blog-pagination-button>`
     : ''
 
   const firstButton = currentIndex > 3
-    ? '<blog-pagination-button class="hidden block-md" index="0" label="« First"></blog-pagination-button>'
+    ? '<blog-pagination-button class="hidden block-lg" index="0" label="« First"></blog-pagination-button>'
     : ''
 
   const lastButton = currentIndex < totalPages - 3
-    ? `<blog-pagination-button class="hidden block-md" index="${totalPages - 1}" label="Last »"></blog-pagination-button>`
+    ? `<blog-pagination-button class="hidden block-lg" index="${totalPages - 1}" label="Last »"></blog-pagination-button>`
     : ''
 
   return html`
@@ -56,11 +56,11 @@ export default function BlogPagination({ html, state }) {
         background-color: white;
       }
     </style>
-    <nav class="block inline-block-md text-center p0 relative">
+    <nav class="block inline-block-lg text-center p0 relative">
       <ul class="flex justify-between">
         ${firstButton}
         ${prevButton}
-        <div class='pages hidden flex-md justify-center overflow-x-hidden'>
+        <div class='pages hidden flex-lg justify-center overflow-x-hidden'>
           ${buttons.join('')}
         </div>
         ${nextButton}
