@@ -66,11 +66,10 @@ async function generate () {
   for (const post of items) {
     feed.addItem({
       title: post.frontmatter.title,
-      id: `${hostname}/blog/posts/${post.href}`,
-      link: `${hostname}/blog/posts/${post.href}`,
+      id: `${hostname}/posts/${post.href}`,
+      link: `${hostname}/posts/${post.href}`,
       description: post.frontmatter.description,
       content: post.content,
-      author: post.frontmatter.author,
       date: new Date(post.frontmatter.published),
     })
   }
