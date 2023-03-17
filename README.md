@@ -66,8 +66,6 @@ app
     ? What would you like to name your first environment? · staging
     Archiving and uploading project to Begin...
     Project uploaded, you can now exit this process and check its status with: begin deploy --status
-    Archiving and uploading project to Begin...
-    Project uploaded, you can now exit this process and check its status with: begin deploy --status
     Beginning deployment of 'staging'
     Packaging build for deployment
     Publishing build to Begin
