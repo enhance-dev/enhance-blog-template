@@ -8,21 +8,13 @@ export default function BlogPaginationButton({ html, state }) {
   const active = booleanAttr(attrs, 'active')
 
   return html`
-    <style>
-      .active {
-        color: var(--light);
-        background-color: var(--dark);
-      }
-    </style>
     <li
       class="
          flex
          items-center
          justify-center
-         font-semibold
+         font-body
          leading5
-         pt-2
-         pb-2
          m0
         "
     >
@@ -33,7 +25,7 @@ export default function BlogPaginationButton({ html, state }) {
            >
             ${label}
           </a>`
-    : `<div class="pl-1 pr-1 ml-3 mr-3 radius0 active">
+    : `<div class="pl-1 pr-1 font-bold active">
                ${label}
              </div>`}
     </li>

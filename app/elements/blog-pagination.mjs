@@ -53,7 +53,6 @@ export default function BlogPagination({ html, state }) {
 
       nav {
         max-width: 60rem;
-        background-color: white;
       }
     </style>
     <nav class="block inline-block-lg text-center p0 relative">
