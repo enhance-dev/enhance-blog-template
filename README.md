@@ -83,4 +83,4 @@ app
 
 This repo comes with a GitHub action that will deploy our site to `staging` when there is a commit to the `main` branch and `production` when you tag a release.
 
-For this to work you must [create a repo secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `BEGIN_TOKEN`. Once you successfully login to Begin using the CLI command `begin login` you can retreive the value for `BEGIN_TOKEN` in the file `~/.begin/config.json`. Use the value of `access_token` in this file as the value for `BEGIN_TOKEN`.
+For this to work you must [create a repo secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `BEGIN_TOKEN`. Once you successfully login to Begin using the CLI command `begin login` you can retrieve the value for `BEGIN_TOKEN` in the file `~/.begin/config.json`. Use the value of `access_token` in this file as the value for `BEGIN_TOKEN`.
