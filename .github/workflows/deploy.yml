@@ -32,7 +32,9 @@ jobs:
         run: npm run posts
 
       - name: Create RSS feed
-        run: npm run rss staging
+        run: npm run rss
+        env:
+          BEGIN_URL: ${{ secrets.BEGIN_URL_STAGING }}
 
       - name: Deploy to staging
         uses: beginner-corp/actions/deploy@main
@@ -65,7 +67,9 @@ jobs:
         run: npm run posts
 
       - name: Create RSS feed
-        run: npm run rss production
+        run: npm run rss
+        env:
+          BEGIN_URL: ${{ secrets.BEGIN_URL_PRODUCTION }}
 
       - name: Deploy to production
         uses: beginner-corp/actions/deploy@main

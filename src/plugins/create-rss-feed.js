@@ -2,11 +2,9 @@ const { join, extname } = require('path') // eslint-disable-line
 const { brotliCompressSync } = require('zlib')
 const base = join(__dirname, '..', '..', 'app', 'blog', 'posts')
 
-function getHostname(hostname) {
-  if ( hostname ) {
-    return hostname
-  }
-  return 'http://localhost:3333'
+function getHostname() {
+  console.log("url", process.env.BEGIN_URL)
+  return process.env.BEGIN_URL ? process.env.BEGIN_URL : 'http://localhost:3333'
 }
 
 async function generate () {
@@ -18,7 +16,7 @@ async function generate () {
 
   const posts = await readdir(base)
 
-  const hostname = getHostname(process.env.BLOG_TEMPLATE_URL)
+  const hostname = getHostname()
 
   async function render(path) {
     const file = await readFile(`${base}/${path}`, 'utf8')
