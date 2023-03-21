@@ -11,7 +11,7 @@ export default function ({ html, state }) {
           limit="${limit}"
           offset="${offset}"
           total="${total}"
-          class="pb3 pb5-md"
+          class="pb3 pb5-lg"
         ></blog-pagination>
       </main>
     </site-layout>
