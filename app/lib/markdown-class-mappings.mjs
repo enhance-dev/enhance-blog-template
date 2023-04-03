@@ -15,14 +15,5 @@ export default {
     'text0-lg',
   ],
   thead: ['text-left'],
-  th: [
-    'border-solid',
-    'border1',
-    'text-p1',
-  ],
-  td: [
-    'border-solid',
-    'border1',
-  ],
   img: ['pb0', 'pt0', 'block', 'm-auto'],
 }
