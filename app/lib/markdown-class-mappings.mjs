@@ -14,6 +14,7 @@ export default {
     'text-1',
     'text0-lg',
   ],
+  thead: ['text-left'],
   th: [
     'border-solid',
     'border1',

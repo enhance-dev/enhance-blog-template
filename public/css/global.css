@@ -24,6 +24,26 @@ code {
   font-size: 0.9em;
 }
 
+hr {
+  border-top: 1px solid var(--color-dark);
+  margin-block: 1.5rem;
+}
+
+/* <dl>, <dt>, and <dd> elements don't have markdown syntax;
+ * therefore their styles are defined here rather than markdown-class-mappings.mjs
+ */
+dl {
+  padding-left: 2rem;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: 1.5em;
+}
+
 .font-body {
   font-family: var(--font-body);
 }
@@ -40,6 +60,10 @@ code {
   }
 
   blockquote {
+    border-color: var(--color-light);
+  }
+
+  hr {
     border-color: var(--color-light);
   }
 }
