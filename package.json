@@ -8,6 +8,13 @@
     "lint": "eslint ./app/**/*.mjs --fix"
   },
   "devDependencies": {
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.303.0",
+    "@aws-sdk/client-dynamodb": "^3.303.0",
+    "@aws-sdk/client-s3": "^3.305.0",
+    "@aws-sdk/client-sns": "^3.303.0",
+    "@aws-sdk/client-sqs": "^3.303.0",
+    "@aws-sdk/client-ssm": "^3.303.0",
+    "@aws-sdk/lib-dynamodb": "^3.303.0",
     "@enhance/types": "^0.5.0",
     "eslint": "^8.30.0"
   },
