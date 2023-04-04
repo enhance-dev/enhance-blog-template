@@ -38,8 +38,8 @@
   "dependencies": {
     "@architect/functions": "^5.4.0",
     "@begin/data": "^4.0.2",
-    "@enhance/arc-plugin-enhance": "^5.0.1",
-    "arcdown": "^2.1.0",
+    "@enhance/arc-plugin-enhance": "^5.0.5",
+    "arcdown": "^2.1.1",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "microformats-parser": "^1.4.1",
