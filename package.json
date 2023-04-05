@@ -7,6 +7,9 @@
     "start": "begin dev",
     "lint": "eslint ./app/**/*.mjs --fix"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@aws-sdk/client-apigatewaymanagementapi": "^3.303.0",
     "@aws-sdk/client-dynamodb": "^3.303.0",
