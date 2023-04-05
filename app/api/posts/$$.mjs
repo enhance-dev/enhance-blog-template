@@ -3,6 +3,7 @@ import { URL } from 'url'
 import { Arcdown } from 'arcdown'
 import HljsLineWrapper from '../../lib/hljs-line-wrapper.mjs'
 import { default as defaultClassMapping } from '../../lib/markdown-class-mappings.mjs'
+import { getWebMentions } from '../../../shared/webmentions.mjs'
 
 /** @type {import('@enhance/types').EnhanceApiFn} */
 export async function get(req) {
@@ -38,10 +39,12 @@ export async function get(req) {
     return { statusCode: 404 }
   }
   const post = await arcdown.render(docMarkdown)
+  const mentions = (await getWebMentions()).filter(mention => (mention.targetPath === activePath && mention.approved))
 
   return {
     json: {
-      post
+      post,
+      mentions
     },
   }
 }

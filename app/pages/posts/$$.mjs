@@ -12,6 +12,7 @@ export default function ({ html, state }) {
           <p class='text-center mb0 mb4-lg'>${published}</p>
           <section slot="doc">${post.html}</section>
         </article>
+        <webmentions-list></webmentions-list>
       </site-layout>
   `
 }
