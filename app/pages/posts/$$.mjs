@@ -1,7 +1,7 @@
 /** @type {import('@enhance/types').EnhanceElemFn} */
 export default function ({ html, state }) {
   const { store } = state
-  const { post } = store
+  const { post, mentions } = store
   const { frontmatter } = post
   const { description = '', published = '', title = '' } = frontmatter
 
@@ -14,7 +14,7 @@ export default function ({ html, state }) {
           <section class="p-summary hidden">${description}</section>
           <h-card class="hidden"></h-card>
         </article>
-        <webmentions-list></webmentions-list>
+        ${mentions?.length ? '<webmentions-list></webmentions-list>' : ''}
       </site-layout>
   `
 }
