@@ -30,6 +30,8 @@ export const handler = arc.events.subscribe(async (event) => {
       newMention.items = items
       const hEntry = items.find((i) => i.type?.includes('h-entry'))
 
+      console.log(JSON.stringify(hEntry))
+
       // get author name
       if (
         hEntry?.properties?.author &&

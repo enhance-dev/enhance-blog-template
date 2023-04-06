@@ -1,3 +1,5 @@
+import { dirname, join } from 'path'
+import url from 'url'
 import { readFileSync } from 'fs'
 import { URL } from 'url'
 import { Arcdown } from 'arcdown'
@@ -41,10 +43,15 @@ export async function get(req) {
   const post = await arcdown.render(docMarkdown)
   const mentions = (await getWebMentions()).filter(mention => (mention.targetPath === activePath && mention.approved))
 
+  let here = dirname(url.fileURLToPath(import.meta.url))
+  let hCardPath = join(here, '..', 'h-card.json')
+  let hCard = JSON.parse(readFileSync(hCardPath, 'utf-8'))
+
   return {
     json: {
       post,
-      mentions
+      mentions,
+      hCard
     },
   }
 }

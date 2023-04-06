@@ -149,3 +149,4 @@ dist
 app/api/posts.json
 app/api/rss.br
 app/api/rss.xml
+app/api/h-card.json
