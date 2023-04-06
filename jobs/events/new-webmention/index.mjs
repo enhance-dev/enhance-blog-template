@@ -30,7 +30,7 @@ export const handler = arc.events.subscribe(async (event) => {
       newMention.items = items
       const hEntry = items.find((i) => i.type?.includes('h-entry'))
 
-      console.log(JSON.stringify(hEntry))
+      console.log(JSON.stringify(hEntry, null, 2))
 
       // get author name
       if (
@@ -55,6 +55,11 @@ export const handler = arc.events.subscribe(async (event) => {
       // get source title
       if (hEntry?.properties?.name && Array.isArray(hEntry.properties.name)) {
         newMention.sourceTitle = hEntry.properties.name[0]
+      }
+
+      // get summary
+      if (hEntry?.properties?.summary && Array.isArray(hEntry.properties.summary)) {
+        newMention.summary = hEntry.properties.summary[0]
       }
     } else {
       console.log('Target URL not found in source body, storing mention anyway')

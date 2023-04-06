@@ -43,6 +43,7 @@ export default function ({ html, state: { store } }) {
       <li>
         <a href="${m.source}">${`"${m.sourceTitle  || m.source}"`}</a>
         ${m.sourceAuthor ? `by ${m.sourceAuthor}` : ''}
+        ${m.summary ? `<div>${m.summary}</div>` : ''}
         <details class="hidden">
           <summary>&gt;</summary>
           <pre>${JSON.stringify(m, null, 2)}</pre>

@@ -1,4 +1,4 @@
-const myContent = 'https://making-2c4.begin.app/'
+const myContent = 'https://ship-hi3.begin.app/posts/2023-04-06-hcard-test'
 const mentions = {
   // 'https://nature-6o8.begin.app/webmention': { // Cole
   //   source: myContent,
@@ -24,10 +24,10 @@ const mentions = {
   //   source: myContent,
   //   target: 'https://tbeseda.com/articles/2023/01/webmention-test',
   // },
-  //'http://localhost:3333/webmention': {
-  //  source: myContent,
-  //  target: 'http://localhost:3333/posts/2023-03-08-how-to-use',
-  //},
+  'http://localhost:3333/webmention': {
+    source: myContent,
+    target: 'http://localhost:3333/posts/2023-03-08-how-to-use',
+  },
   // 'https://ship-hi3.begin.app/webmention': {
   //  source: myContent,
   //  target: 'https://ship-hi3.begin.app/posts/2023-03-08-how-to-use',
