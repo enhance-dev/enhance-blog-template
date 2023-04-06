@@ -64,7 +64,7 @@ export default function ({ html, state: { store } }) {
     ? '<div class="authorAvatar radius-100 flex-shrink-0"></div>'
     : `<div class="authorInitial radius-100 flex-shrink-0 flex items-center justify-center font-bold mr-2" aria-hidden="true">${m.sourceAuthor.substring(0,1)}</div>`
 }
-            <h1 class='text0'>
+            <h1 class='text0 leading1'>
               <span class='font-bold block'>${m.sourceAuthor}</span>
               <span class='text-1'>${new Date(m.created).toLocaleDateString()}</span>
             </h1>
