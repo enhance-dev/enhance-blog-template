@@ -1,0 +1,22 @@
+{
+    "name":"Sally Ride",
+    "honorificPrefix": "Dr.",
+    "givenName": "Sally",
+    "additionalName": "K.",
+    "familyName": "Ride",
+    "honorificSuffix": "Ph.D.",
+    "nickname": "sallykride",
+    "org": "Sally Ride Science",
+    "photo": "http://example.com/sk.jpg",
+    "url": "http://sally.example.com",
+    "email": "mailto:sally@example.com",
+    "tel": "+1.818.555.1212",
+    "streetAddress": "123 Main st.",
+    "locality": "Los Angeles",
+    "region": "California",
+    "postalCode": "91316",
+    "countryName": "U.S.A",
+    "bday": "1951-05-26",
+    "category": "physicist",
+    "note": "First American woman in space."
+}

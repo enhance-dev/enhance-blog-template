@@ -4,7 +4,7 @@ export default function ({ html, state }) {
   const { limit, offset, total } = store
 
   return html`
-    <h-card class="hidden"></h-card>
+    <my-h-card class="hidden"></my-h-card>
     <site-layout>
       <main>
         <blog-posts></blog-posts>

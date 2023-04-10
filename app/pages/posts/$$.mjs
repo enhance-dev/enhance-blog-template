@@ -12,7 +12,7 @@ export default function ({ html, state }) {
           <p class='dt-published text-center mb0 mb4-lg'>${published}</p>
           <section slot="e-content doc">${post.html}</section>
           <section class="p-summary hidden">${description}</section>
-          <h-card class="hidden"></h-card>
+          <my-h-card class="hidden"></my-h-card>
         </article>
         ${mentions?.length ? '<webmentions-list></webmentions-list>' : ''}
       </site-layout>
