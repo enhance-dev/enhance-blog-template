@@ -50,6 +50,9 @@ export const handler = arc.events.subscribe(async (event) => {
         if (hCard?.properties?.name && Array.isArray(hCard.properties.name)) {
           newMention.sourceAuthor = hCard.properties.name[0]
         }
+        if (hCard?.properties?.photo && Array.isArray(hCard.properties.photo)) {
+          newMention.sourceAuthorImage = hCard.properties.photo[0]?.value
+        }
       }
 
       // get source title

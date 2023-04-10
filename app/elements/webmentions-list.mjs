@@ -61,7 +61,7 @@ export default function ({ html, state: { store } }) {
         <article class='font-body p0'>
           <div class="flex mb0 items-center">
             ${m.sourceAuthorImage
-    ? '<div class="authorAvatar radius-100 flex-shrink-0"></div>'
+    ? `<img class="authorAvatar radius-100 flex-shrink-0" width="32" height="32" src="${m.sourceAuthorImage}"/>`
     : `<div class="authorInitial radius-100 flex-shrink-0 flex items-center justify-center font-bold mr-2" aria-hidden="true">${m.sourceAuthor.substring(0,1)}</div>`
 }
             <h1 class='text0 leading1'>
