@@ -11,6 +11,7 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "@architect/plugin-lambda-invoker": "^1.0.0",
     "@aws-sdk/client-apigatewaymanagementapi": "^3.303.0",
     "@aws-sdk/client-dynamodb": "^3.303.0",
     "@aws-sdk/client-s3": "^3.305.0",
@@ -43,6 +44,7 @@
     "@begin/data": "^4.0.2",
     "@enhance/arc-plugin-enhance": "^5.0.5",
     "arcdown": "^2.1.1",
+    "cheerio": "^1.0.0-rc.12",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "microformats-parser": "^1.4.1",

@@ -51,7 +51,7 @@ export const handler = arc.events.subscribe(async (event) => {
           newMention.sourceAuthor = hCard.properties.name[0]
         }
         if (hCard?.properties?.photo && Array.isArray(hCard.properties.photo)) {
-          newMention.sourceAuthorImage = hCard.properties.photo[0]?.value
+          newMention.sourceAuthorImage = hCard.properties.photo[0]
         }
       }
 
@@ -76,6 +76,9 @@ export const handler = arc.events.subscribe(async (event) => {
       message: `source URL ${sourceUrl.href} returned ${sourceReq.status}`,
     }
   }
+
+  console.log(newMention)
+  console.log(JSON.stringify(newMention, null, 2))
 
   // save result
   await upsertWebMention(newMention)
