@@ -87,5 +87,5 @@ For this to work you must [create a repo secret](https://docs.github.com/en/acti
 
 Additionally to ensure you `/rss` feed points to the correct environment you will need to create two additional repo secrets.
 
-- `BEGIN_URL_STAGING`: set to the url you received when creating the `staging` environment
-- `BEGIN_URL_PRODUCTION`: set to  the url you received when creating the `production` environment
+- `SITE_URL_STAGING`: set to the url you received when creating the `staging` environment
+- `SITE_URL_PRODUCTION`: set to  the url you received when creating the `production` environment
