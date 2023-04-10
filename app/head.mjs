@@ -1,7 +1,7 @@
 import { getLinkTag } from '@enhance/arc-plugin-styles/get-styles'
 
 export default function Head() {
-  const siteUrl = process.env.BEGIN_URL || 'https://localhost:3333'
+  const siteUrl = process.env.SITE_URL || 'https://localhost:3333'
   return`
     <!DOCTYPE html>
     <html lang='en'>
