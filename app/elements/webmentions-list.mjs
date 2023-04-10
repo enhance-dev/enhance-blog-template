@@ -33,6 +33,11 @@ export default function ({ html, state: { store } }) {
         background-color: hsla(0deg 0% 0% / 10%);
       }
 
+      .authorAvatar {
+        width: 2rem;
+        aspect-ratio: 1 / 1;
+      }
+
       .authorInitial {
         background-color: var(--color-dark);
         color: var(--color-light);
@@ -61,7 +66,7 @@ export default function ({ html, state: { store } }) {
         <article class='font-body p0'>
           <div class="flex mb0 items-center">
             ${m.sourceAuthorImage
-    ? `<img class="authorAvatar radius-100 flex-shrink-0" width="32" height="32" src="${m.sourceAuthorImage}"/>`
+    ? `<img class="authorAvatar radius-100 flex-shrink-0 mr-2" src="${m.sourceAuthorImage}"/>`
     : `<div class="authorInitial radius-100 flex-shrink-0 flex items-center justify-center font-bold mr-2" aria-hidden="true">${m.sourceAuthor.substring(0,1)}</div>`
 }
             <h1 class='text0 leading1'>
