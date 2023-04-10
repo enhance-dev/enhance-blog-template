@@ -10,6 +10,12 @@ export default function AdminWebmentions({ html, state }) {
             width: 1.75rem;
             aspect-ratio: 1 / 1;
           }
+
+          @media (prefers-color-scheme: dark) {
+            button[type='submit'] {
+              background: #333;
+            }
+          }
         </style>
         <form action="/admin/webmentions" method="POST">
           <input type="hidden" name="key" value="${mention.key}">
