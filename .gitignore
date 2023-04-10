@@ -3,12 +3,13 @@ node_modules/
 
 # Enhance temp files
 .enhance/
+shared/enhance-styles/
 
 # Generated assets
 public/static.json
+shared/static.json
 public/bundles/
 public/pages/
-shared/
 
 # Architect CloudFormation
 sam.json
