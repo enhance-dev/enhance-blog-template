@@ -55,9 +55,12 @@ export default function AdminWebmentions({ html, state }) {
           white-space: nowrap;
         }
       </style>
+      
+      <hr class='mb5' />
 
       <h2 class='font-heading font-bold text2 text3-lg mb3 text-center'>💬 Webmentions</h2>
 
+      ${mentions?.length ? `
       <table class='font-body w-full mb5'>
         <thead class='text-left'>
           <tr>
@@ -86,5 +89,8 @@ export default function AdminWebmentions({ html, state }) {
   }).join('')}
         </tbody>
       </table>
+      ` : `
+        <p class='font-body text-center mt5 mb5'>No mentions yet!</p>
+      `}
     `
 }

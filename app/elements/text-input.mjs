@@ -15,7 +15,7 @@ export default function TextInput ({ html, state }) {
         }
 
         input::placeholder {
-          color: var(--color-dark);
+          color: hsla(0deg 0% 0% / 50%);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -23,7 +23,7 @@ export default function TextInput ({ html, state }) {
             box-shadow: 0 0 0 1px hsla(0deg 0% 80% / 60%);
           }
           input::placeholder {
-            color: var(--color-light);
+            color: hsla(0deg 0% 100% / 50%);
           }
           input:focus {
             box-shadow: 0 0 0 2px var(--color-light);
