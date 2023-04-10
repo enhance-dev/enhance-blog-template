@@ -72,7 +72,7 @@ export default function AdminWebmentions({ html, state }) {
     const sourceUrl = new URL(m.source)
     return /* html */`
             <tr>
-              <td><a href="${sourceUrl.href}" target="_blank">${m.sourceTitle} (${sourceUrl.hostname})</a></td>
+              <td><a href="${sourceUrl.href}" target="_blank" class='underline'>${m.sourceTitle} (${sourceUrl.hostname})</a></td>
               <td>${m.targetPath}</td>
               <td>${m.sourceAuthor}</td>
               <td>
