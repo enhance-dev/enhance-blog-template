@@ -1,14 +1,21 @@
 import arc from "@architect/functions"
 import * as cheerio from 'cheerio'
+import li from 'li'
 
 async function getWebmentionUrl(targetUrl) {
   let webmention = null
-  const targetReq = await fetch(targetUrl.href)
-  if (targetReq.ok) {
-    // TODO: check link headers
-    // console.log(targetReq.headers)
+  const targetRes = await fetch(targetUrl.href)
+  if (targetRes.ok) {
+    const linkHeader = targetRes.headers.has('links') ? targetRes.headers.get('links') : targetRes.headers.get('Links')
+    if (linkHeader) {
+      const links = li.parse(linkHeader)
+      webmention = links.webmention || links['http://webmention.org/']
+      if (webmention) {
+        return webmention
+      }
+    }
 
-    const text = await targetReq.text()
+    const text = await targetRes.text()
     const $ = cheerio.load(text)
     let found = false
     $('link').each((idx, el) => {
