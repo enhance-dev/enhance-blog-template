@@ -33,7 +33,7 @@ export async function post({ body, method, path }) {
   }
 
   await arc.events.publish({
-    name: 'new-webmention',
+    name: 'incoming-webmention',
     payload: { source, target },
   })
 
