@@ -11,9 +11,6 @@ export async function post({ method, path, session, body }) {
   const mention = await getWebMention(key)
   mention.approved = approved === 'true'
 
-  // verify it if you'd like:
-  // const mention = await webmentions.get({ id })
-
   await upsertWebMention(mention)
 
   return { location: '/admin' }

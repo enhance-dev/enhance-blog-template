@@ -3,9 +3,7 @@ import { upsertWebMention } from "@architect/shared/webmentions.mjs"
 import { mf2 } from 'microformats-parser'
 
 export const handler = arc.events.subscribe(async (event) => {
-  console.log(event)
   const { target, source } = event
-
   const targetUrl = new URL(target)
   const sourceUrl = new URL(source)
   const newMention = {

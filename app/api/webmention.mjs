@@ -32,6 +32,7 @@ export async function post({ body, method, path }) {
     }
   }
 
+  // publish event to store incoming webmention
   await arc.events.publish({
     name: 'incoming-webmention',
     payload: { source, target },

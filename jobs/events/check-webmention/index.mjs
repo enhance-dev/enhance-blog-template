@@ -4,8 +4,9 @@ import * as cheerio from 'cheerio'
 
 export const handler = arc.events.subscribe(async (event) => {
   const { link, content } = event
-  console.log('check-webmention', link)
 
+  // Check to see if any of our outgoing links are to sites
+  // that accept web mentions
   const $ = cheerio.load(content)
   $('a').each(async (idx, el) => {
     const target = el?.attribs?.href

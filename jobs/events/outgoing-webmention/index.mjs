@@ -30,8 +30,10 @@ async function getWebmentionUrl(targetUrl) {
 
 export const handler = arc.events.subscribe(async (event) => {
   const { target } = event
+  // Check for web mention url at remote site
   const webmentionUrl = await getWebmentionUrl(new URL(target))
 
+  // if the remote site accepts webmentions, send
   if (webmentionUrl) {
     const response = await fetch(webmentionUrl, {
       method: 'POST',

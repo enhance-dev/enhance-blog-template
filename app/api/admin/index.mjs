@@ -7,11 +7,7 @@ export async function get({ method, path, session }) {
   const authorized = !!(session.authorized)
   if (!authorized) return { location: '/login' }
 
-  console.log(authorized)
-
   const mentions = await getWebMentions()
-
-  console.log(mentions)
 
   return {
     json: { authorized, mentions }
