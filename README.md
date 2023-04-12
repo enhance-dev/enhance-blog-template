@@ -6,23 +6,40 @@ This is the repo containing the blog template project using Enhance.
 
 ```
 app
-├── api ............... data routes
+├── api ..................... data routes
+│   ├── admin
+│   │   ├── index.mjs ....... load data for admin route
+│   │   └── webmentions.mjs . approve webmention
 │   ├── posts
-│   │   └── $$.mjs .... load data for individual blog post
-│   └── index.mjs ..... list of blog posts
+│   │   └── $$.mjs .......... load data for individual blog post
+│   ├── index.mjs ........... list of blog posts
+│   ├── login.mjs ........... verify login
+│   ├── logout.mjs .......... log out user
+│   ├── rss.mjs ............. rss feed
+│   └── webmention.mjs ...... incoming webmention
 ├── blog
-│   └── posts ......... post files in markdown format
+│   └── posts ............... post files in markdown format
 │       └── *.md
-├── elements .......... custom element pure functions
+├── elements ................ custom element pure functions
 │   └── *.mjs
 ├── lib
 │   ├── hljs-line-wrapper.mjs
 │   └── markdown-class-mappings.mjs
-├── pages ............. file-based routing
+├── pages ................... file-based routing
 │   ├── posts
-│   │   └── $$.mjs .... individual blog post
-│   └── index.mjs ..... list of blog posts
-└── head.mjs .......... head tag for each page
+│   │   └── $$.mjs .......... individual blog post
+│   └── index.mjs ........... list of blog posts
+└── head.mjs ................ head tag for each page
+jobs
+├── events
+│   ├── check-webmention .... check new rss item for a webmention
+│   ├── incoming-webmention . accept incoming webmention
+│   └── outgoing-webmention . send outgoing webmention
+└── scheduled ............... scheduled functions
+    └── check-rss ........... look for new rss items
+shared ...................... code shared between app and jobs
+├── posts.mjs ............... database methods for rss items
+└── webmentions ............. database methods for webmentions
 ```
 
 ## Quick Start
@@ -89,3 +106,29 @@ Additionally to ensure you `/rss` feed points to the correct environment you wil
 
 - `SITE_URL_STAGING`: set to the url you received when creating the `staging` environment
 - `SITE_URL_PRODUCTION`: set to  the url you received when creating the `production` environment
+
+## Setting up WebMentions
+
+> Webmention is a W3C recommendation that describes a simple protocol to notify any URL when a website links to it, and for web pages to request notifications when somebody links to them.
+
+The `enhance-blog-template` supports both incoming and outgoing webmentions. To enable this funcationality, complete the following steps:
+
+- Add your information to `app/api/h-card.json`. The template will add a `h-card` to each of your blog posts. This will allow remote sites to discover information about you when you link to them. Only include what information you feel comfortable in sharing. A good default would be name, photo and url. For example:
+
+    ```json
+    {
+        "name": "Simon MacDonald",
+        "photo": "https://github.com/macdonst.png",
+        "url": "https://bookrecs.org"
+    }
+    ```
+
+    For a more detailed example see [app/api/h-card.json.example](./app/api/h-card.json.example).
+
+- Set a password for the `/admin` route:
+
+    ```bash
+    begin env create --env staging --name SECRET_PASSWORD --value yoursecretpassword
+    ```
+
+    You can use the `/admin` route to approve incoming webmentions. They won't show up under your blog post until you approve them.
