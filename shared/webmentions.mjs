@@ -6,7 +6,6 @@ const deleteWebMention = async function (key) {
 }
 
 const upsertWebMention = async function (webmention) {
-  console.log(JSON.stringify({ table: 'webmentions', ...webmention }))
   return data.set({ table: 'webmentions', ...webmention })
 }
 

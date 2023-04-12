@@ -1,9 +1,7 @@
 import { getWebMention, upsertWebMention } from '../../../shared/webmentions.mjs'
 
 /** @type {import('@enhance/types').EnhanceApiFn} */
-export async function post({ method, path, session, body }) {
-  console.log(`<${Date.now()}> ${method} ${path}`)
-
+export async function post({ session, body }) {
   const authorized = !!(session.authorized)
   if (!authorized) return { location: '/' }
 

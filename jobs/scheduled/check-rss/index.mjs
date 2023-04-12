@@ -15,8 +15,6 @@ export async function handler () {
   const items = result?.rss?.channel[0]?.item || []
   const filteredItems = items.filter(item => !posts.find(post => post?.link === item.link[0]))
 
-  console.log('filteredItems', filteredItems.length)
-
   // Send new posts to be checked for webmentions
   // eslint-disable-next-line no-undef
   await Promise.all(filteredItems.map(async (item) => {

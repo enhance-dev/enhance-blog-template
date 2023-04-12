@@ -1,12 +1,8 @@
 import arc from "@architect/functions"
 
 /** @type {import('@enhance/types').EnhanceApiFn} */
-export async function post({ body, method, path }) {
-  console.log(`<${Date.now()}> ${method} ${path}`)
-
+export async function post({ body }) {
   const { target, source } = body
-
-  console.log( target, source)
 
   // validate incoming webmention
   const errors = []

@@ -1,9 +1,6 @@
 /** @type {import('@enhance/types').EnhanceElemFn} */
 export default function ({ html, state: { store } }) {
   const { mentions } = store
-
-  console.log(mentions)
-
   return html`
     <style>
       ul {

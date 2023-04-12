@@ -14,21 +14,15 @@ export const handler = arc.events.subscribe(async (event) => {
     targetPath: targetUrl.pathname,
   }
 
-  console.log('Drafting new mention record:', newMention)
-
   const sourceReq = await fetch(sourceUrl.href)
   if (sourceReq.ok) {
-    console.log('Source URL returned 200 OK, parsing body...')
     const sourceBody = await sourceReq.text()
 
     // search body for target URL
     if (sourceBody.indexOf(targetUrl.href) > -1) {
-      console.log('Target URL found in source body, parsing microformats...')
       const { items } = mf2(sourceBody, { baseUrl: sourceUrl.href })
       newMention.items = items
       const hEntry = items.find((i) => i.type?.includes('h-entry'))
-
-      console.log(JSON.stringify(hEntry, null, 2))
 
       // get author name
       if (
@@ -63,20 +57,15 @@ export const handler = arc.events.subscribe(async (event) => {
         newMention.summary = hEntry.properties.summary[0]
       }
     } else {
-      console.log('Target URL not found in source body, storing mention anyway')
       newMention.error = {
         message: `target URL ${targetUrl.href} not found in source (${sourceUrl.href}) body`,
       }
     }
   } else {
-    console.log('Source URL returned non-200 status, storing mention anyway')
     newMention.error = {
       message: `source URL ${sourceUrl.href} returned ${sourceReq.status}`,
     }
   }
-
-  console.log(newMention)
-  console.log(JSON.stringify(newMention, null, 2))
 
   // save result
   await upsertWebMention(newMention)

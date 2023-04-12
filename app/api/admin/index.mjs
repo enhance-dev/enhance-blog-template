@@ -1,9 +1,7 @@
 import { getWebMentions } from '../../../shared/webmentions.mjs'
 
 /** @type {import('@enhance/types').EnhanceApiFn} */
-export async function get({ method, path, session }) {
-  console.log(`<${Date.now()}> ${method} ${path}`)
-
+export async function get({ session }) {
   const authorized = !!(session.authorized)
   if (!authorized) return { location: '/login' }
 

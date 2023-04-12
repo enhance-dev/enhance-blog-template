@@ -1,6 +1,6 @@
-import path from 'path'
-import url from 'url'
-import { readFileSync } from 'fs'
+import path from 'node:path'
+import url from 'node:url'
+import { readFileSync } from 'node:fs'
 
 export async function get(req) {
   let here = path.dirname(url.fileURLToPath(import.meta.url))
