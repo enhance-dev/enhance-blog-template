@@ -1,8 +1,11 @@
-import { readFileSync } from 'fs'
-import { URL } from 'url'
+import { dirname, join } from 'node:path'
+import url from 'node:url'
+import { readFileSync } from 'node:fs'
+import { URL } from 'node:url'
 import { Arcdown } from 'arcdown'
 import HljsLineWrapper from '../../lib/hljs-line-wrapper.mjs'
 import { default as defaultClassMapping } from '../../lib/markdown-class-mappings.mjs'
+import { getWebMentions } from '../../../shared/webmentions.mjs'
 
 /** @type {import('@enhance/types').EnhanceApiFn} */
 export async function get(req) {
@@ -38,10 +41,17 @@ export async function get(req) {
     return { statusCode: 404 }
   }
   const post = await arcdown.render(docMarkdown)
+  const mentions = (await getWebMentions()).filter(mention => (mention.targetPath === activePath && mention.approved))
+
+  let here = dirname(url.fileURLToPath(import.meta.url))
+  let hCardPath = join(here, '..', 'h-card.json')
+  let hCard = JSON.parse(readFileSync(hCardPath, 'utf-8'))
 
   return {
     json: {
-      post
+      post,
+      mentions,
+      hCard
     },
   }
 }
