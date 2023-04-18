@@ -1,26 +1,32 @@
 import arc from "@architect/functions"
 import * as cheerio from 'cheerio'
 import li from 'li'
+import { URL } from 'node:url'
 
 async function getWebmentionUrl(targetUrl) {
   let webmention = null
-  const targetRes = await fetch(targetUrl.href)
+  const targetRes = await fetch(targetUrl.href, {redirect: "follow"})
   if (targetRes.ok) {
-    const linkHeader = targetRes.headers.has('links') ? targetRes.headers.get('links') : targetRes.headers.get('Links')
+    const linkHeader = targetRes.headers.has('link') ? targetRes.headers.get('link') : targetRes.headers.get('Link')
     if (linkHeader) {
       const links = li.parse(linkHeader)
       webmention = links.webmention || links['http://webmention.org/']
       if (webmention) {
-        return webmention
+        return webmention.startsWith('http') ? webmention : new URL(webmention, targetUrl.origin)
       }
     }
 
     const text = await targetRes.text()
     const $ = cheerio.load(text)
     let found = false
-    $('link').each((idx, el) => {
-      if (!found && el?.attribs?.rel === 'webmention' && el?.attribs?.href) {
-        webmention = el.attribs.href
+    $('link, a').each((idx, el) => {
+      const rels = (el?.attribs?.rel || '').split(' ')
+      if (!found && (el?.attribs?.rel === 'webmention' || rels.includes('webmention'))) {
+        if (el?.attribs?.href) {
+          webmention = el.attribs.href.startsWith('http') ? el.attribs.href : new URL(el.attribs.href, targetUrl.origin)
+        } else {
+          webmention = targetUrl.href
+        }
         found = true
       }
     })
