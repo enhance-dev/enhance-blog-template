@@ -61,13 +61,23 @@ async function generate () {
   })
 
   for (const post of items) {
+    let { frontmatter, content, href } = post
+    let { title = '', description = '', published = '', author = '', category = '' } = frontmatter
+    let link = `${hostname}/posts/${href}`
+    let image = frontmatter.image ? `${hostname}${frontmatter.image}` : null
+    let authorArray = author ? [ { name: author }] : []
+    let categoryArray = category ? category.split(',').map(str => { return { name: str.trim() } }) : []
+    console.log(categoryArray)
     feed.addItem({
-      title: post.frontmatter.title,
-      id: `${hostname}/posts/${post.href}`,
-      link: `${hostname}/posts/${post.href}`,
-      description: post.frontmatter.description,
-      content: post.content,
-      date: new Date(post.frontmatter.published),
+      title,
+      id: link,
+      link,
+      description,
+      content,
+      date: new Date(published),
+      author: authorArray,
+      image,
+      category: categoryArray
     })
   }
 
