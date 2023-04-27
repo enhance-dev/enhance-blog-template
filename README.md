@@ -44,7 +44,6 @@ shared ...................... code shared between app and jobs
 
 ## Quick Start
 
-- [Install the Begin CLI](https://begin.com/docs/)
 - Clone this repo:
 
   ```bash
@@ -67,6 +66,7 @@ shared ...................... code shared between app and jobs
 
  ## Deploy to Production
 
+- [Install](https://begin.com/docs/getting-started/installing-the-begin-cli) the Begin CLI.
 - Login to Begin
 
     ```bash
