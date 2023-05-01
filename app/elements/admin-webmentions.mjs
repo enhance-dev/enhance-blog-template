@@ -60,11 +60,15 @@ export default function AdminWebmentions({ html, state }) {
           text-overflow: ellipsis;
           white-space: nowrap;
         }
+
+        h2 {
+          text-align: var(--align-heading);
+        }
       </style>
       
       <hr class='mb5' />
 
-      <h2 class='font-heading font-bold text2 text3-lg mb3 text-center'>💬 Webmentions</h2>
+      <h2 class='font-heading font-bold text2 text3-lg mb3'>💬 Webmentions</h2>
 
       ${mentions?.length ? `
       <table class='font-body w-full mb5'>
@@ -96,7 +100,7 @@ export default function AdminWebmentions({ html, state }) {
         </tbody>
       </table>
       ` : `
-        <p class='font-body text-center mt5 mb5'>No mentions yet!</p>
+        <p class='font-body mt5 mb5'>No mentions yet!</p>
       `}
     `
 }
