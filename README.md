@@ -101,6 +101,7 @@ shared ...................... code shared between app and jobs
 This repo comes preloaded with two basic themes:
 
 | | Minimal | Elegant |
+| - | - | - |
 | light | ![Minimal Light](public/images/theme-minimal-light.png) | ![Elegant Light](public/images/theme-elegant-light.png) |
 | dark | ![Minimal Dark](public/images/theme-minimal-dark.png) | ![Elegant Dark](public/images/theme-elegant-dark.png) |
 
