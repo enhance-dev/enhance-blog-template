@@ -3,7 +3,7 @@ node_modules/
 
 # Enhance temp files
 .enhance/
-shared/enhance-styles/
+shared/enhance-styles
 
 # Generated assets
 public/static.json

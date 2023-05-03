@@ -96,6 +96,24 @@ shared ...................... code shared between app and jobs
     App environment 'production' created at https://blog-template-prod.begin.app
     ```
 
+## Styling
+
+This repo comes preloaded with two basic themes:
+
+| | Minimal | Elegant |
+| - | - | - |
+| light | ![Minimal Light](public/images/theme-minimal-light.png) | ![Elegant Light](public/images/theme-elegant-light.png) |
+| dark | ![Minimal Dark](public/images/theme-minimal-dark.png) | ![Elegant Dark](public/images/theme-elegant-dark.png) |
+
+To switch from one theme to another, change the filename referenced under the `@enhance-styles` pragma in the `.arc` file:
+
+```
+@enhance-styles
+config theme-minimal.json
+```
+
+These themes are intended as basic starting points for your own customization. To learn more about how to style your blog, [check out this deep dive on the Begin blog](https://begin.com/blog/posts/2023-04-06-customizing-the-enhance-blog-template)!
+
 ## Configuring CI/CD
 
 This repo comes with a GitHub action that will deploy our site to `staging` when there is a commit to the `main` branch and `production` when you tag a release.

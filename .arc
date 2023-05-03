@@ -24,7 +24,7 @@ check-rss
   src jobs/scheduled/check-rss
 
 @enhance-styles
-config styleguide.json
+config theme-minimal.json
 
 @aws
 runtime nodejs18.x

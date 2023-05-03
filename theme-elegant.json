@@ -1,0 +1,17 @@
+{
+  "base": 16,
+  "scale": {
+    "ratio": "minorThird",
+    "steps": 12
+  },
+  "properties": {
+    "align-heading": "center",
+    "color-dark": "hsl(204deg 30% 30%)",
+    "color-light": "hsl(260deg 30% 94%)",
+    "font-body": "Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;",
+    "font-heading": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;"
+  },
+  "queries": {
+    "lg": "48em"
+  }
+}
