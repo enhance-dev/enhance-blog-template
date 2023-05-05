@@ -67,7 +67,6 @@ async function generate () {
     let image = frontmatter.image ? `${hostname}${frontmatter.image}` : null
     let authorArray = author ? [ { name: author }] : []
     let categoryArray = category ? category.split(',').map(str => { return { name: str.trim() } }) : []
-    console.log(categoryArray)
     feed.addItem({
       title,
       id: link,

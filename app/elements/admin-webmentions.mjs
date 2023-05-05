@@ -65,7 +65,7 @@ export default function AdminWebmentions({ html, state }) {
           text-align: var(--align-heading);
         }
       </style>
-      
+
       <hr class='mb5' />
 
       <h2 class='font-heading font-bold text2 text3-lg mb3'>💬 Webmentions</h2>
@@ -77,6 +77,7 @@ export default function AdminWebmentions({ html, state }) {
             <th>Source</th>
             <th>Target</th>
             <th>Author</th>
+            <th>Found</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -88,6 +89,7 @@ export default function AdminWebmentions({ html, state }) {
               <td><a href="${sourceUrl.href}" target="_blank" class='underline'>${m.sourceTitle} (${sourceUrl.hostname})</a></td>
               <td>${m.targetPath}</td>
               <td>${m.sourceAuthor}</td>
+              <td>${m.found}</td>
               <td>
         ${typeof m.approved === 'boolean'
     ? m.approved ? 'Approved' : 'Rejected'
