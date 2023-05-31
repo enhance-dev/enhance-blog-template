@@ -13,7 +13,7 @@ export default function Head() {
         <link rel='stylesheet' href='/_public/css/global.css' />
         <link rel='stylesheet' href='/_public/css/a11y-dark.min.css' />
         <link rel="webmention" href="${siteUrl}/webmention">
-        ${me && `<link href="${me}" rel="me">`}
+        ${me ? `<link href="${me}" rel="me">` : ''}
       </head>
   `
 }
