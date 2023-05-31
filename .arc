@@ -28,3 +28,6 @@ config theme-minimal.json
 
 @aws
 runtime nodejs18.x
+
+@begin
+appID 38PS6440
