@@ -4,13 +4,12 @@ export default function BlogContainer({ html }) {
         :host {
           display: block;
           max-width: 90vw;
-          margin-left: auto;
-          margin-right: auto;
+          margin-inline: auto;
         }
 
         @media screen and (min-width: 48em) {
           :host {
-            max-width: 100ch;
+            max-width: 82ch;
           }
         }
       </style>

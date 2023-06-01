@@ -14,7 +14,7 @@ Or perhaps you'd rather something a little more orderly:
 
 1. This is an ordered list.
 1. Its items are preceded by ordinal characters like numbers and letters.
-1. Use this list when the order of the items is important. For example, the ingredients in a recipe would be written using an unordered list, but the cooking instructions would be written using an ordered list. Now this in wraps, too.
+1. Use this list when the order of the items is important. For example, the ingredients in a recipe would be written using an unordered list, but the cooking instructions would be written using an ordered list. Now this line wraps, too.
 
 For those times when you need to present a list of terms with accompanying details for each, you can use a description list:
 

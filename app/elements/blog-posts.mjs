@@ -8,7 +8,7 @@ export default function BlogPosts({ html, state }) {
     .join('')
 
   return html`
-      <section class="m-auto pt0 pb0">
+      <section class="mi-auto pb0">
         ${cards}
       </section>
     `

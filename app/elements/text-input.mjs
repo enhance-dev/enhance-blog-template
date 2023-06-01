@@ -31,10 +31,10 @@ export default function TextInput ({ html, state }) {
         }
       </style>
       <label>
-        <span class='block text-1 mb-3 font-semibold'>
+        <span class='block text-1 mbe-3 font-semibold'>
           ${label}
         </span>
-        <input id='${id}' name='${name}' type='${type}' placeholder='${placeholder}' autocomplete='${autocomplete}' class='mb0 p-2 w-full' />
+        <input id='${id}' name='${name}' type='${type}' placeholder='${placeholder}' autocomplete='${autocomplete}' class='mbe0 p-2 w-full' />
       </label>
     `
 }

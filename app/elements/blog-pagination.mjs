@@ -23,11 +23,11 @@ export default function BlogPagination({ html, state }) {
     )
 
   const prevButton = currentIndex !== 0
-    ? `<blog-pagination-button class="mr-auto mr-0-lg" index="${currentIndex - 1}" label="‹ Prev"></blog-pagination-button>`
+    ? `<blog-pagination-button class="mie-auto mie-0-lg" index="${currentIndex - 1}" label="‹ Prev"></blog-pagination-button>`
     : ''
 
   const nextButton = currentIndex + 1 !== totalPages
-    ? `<blog-pagination-button class="ml-auto ml-0-lg" index="${currentIndex + 1}" label="Next ›"></blog-pagination-button>`
+    ? `<blog-pagination-button class="mis-auto mis-0-lg" index="${currentIndex + 1}" label="Next ›"></blog-pagination-button>`
     : ''
 
   const firstButton = currentIndex > 3
@@ -56,10 +56,10 @@ export default function BlogPagination({ html, state }) {
       }
     </style>
     <nav class="block inline-block-lg text-center p0 relative">
-      <ul class="flex justify-between">
+      <ul class="flex justify-content-between">
         ${firstButton}
         ${prevButton}
-        <div class='pages hidden flex-lg justify-center overflow-x-hidden'>
+        <div class='pages hidden flex-lg justify-content-center overflow-x-hidden'>
           ${buttons.join('')}
         </div>
         ${nextButton}

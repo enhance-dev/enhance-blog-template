@@ -25,7 +25,7 @@ code {
 }
 
 hr {
-  border-top: 1px solid var(--color-dark);
+  border-block-start: 1px solid var(--color-dark);
   margin-block: 1.5rem;
 }
 
@@ -33,7 +33,7 @@ hr {
  * therefore their styles are defined here rather than markdown-class-mappings.mjs
  */
 dl {
-  padding-left: 2rem;
+  padding-inline-start: var(--space-4);
 }
 
 dt {
@@ -41,7 +41,7 @@ dt {
 }
 
 dd {
-  margin-bottom: 1.5em;
+  margin-block-end: 1.5em;
 }
 
 .font-body {

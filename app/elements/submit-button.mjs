@@ -17,7 +17,7 @@ export default function SubmitButton ({ html }) {
           }
         }
       </style>
-      <button type='submit' class='pt-3 pb-3 pl0 pr0 font-semibold'>
+      <button type='submit' class='pb-3 pi0 font-semibold'>
         Submit
       </button>
     `

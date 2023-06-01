@@ -19,8 +19,8 @@ export default function AdminWebmentions({ html, state }) {
         </style>
         <form action="/admin/webmentions" method="POST">
           <input type="hidden" name="key" value="${mention.key}">
-          <button type="submit" name="approved" class='radius-100 inline-flex flex-none items-center justify-center leading0 mr-5 mr-2-lg' value="true">👍</button>
-          <button type="submit" name="approved" class='radius-100 inline-flex flex-none items-center justify-center leading0' value="false">⛔️</button>
+          <button type="submit" name="approved" class='radius-100 inline-flex flex-none align-items-center justify-content-center leading0 mie-5 mie-2-lg' value="true">👍</button>
+          <button type="submit" name="approved" class='radius-100 inline-flex flex-none align-items-center justify-content-center leading0' value="false">⛔️</button>
         </form>
       `
   }
@@ -66,12 +66,12 @@ export default function AdminWebmentions({ html, state }) {
         }
       </style>
 
-      <hr class='mb5' />
+      <hr class='mbe5' />
 
-      <h2 class='font-heading font-bold text2 text3-lg mb3'>💬 Webmentions</h2>
+      <h2 class='font-heading font-bold text2 mbe3'>💬 Webmentions</h2>
 
       ${mentions?.length ? `
-      <table class='font-body w-full mb5'>
+      <table class='font-body w-full mbe5'>
         <thead class='text-left'>
           <tr>
             <th>Source</th>
@@ -102,7 +102,7 @@ export default function AdminWebmentions({ html, state }) {
         </tbody>
       </table>
       ` : `
-        <p class='font-body mt5 mb5'>No mentions yet!</p>
+        <p class='font-body mb5'>No mentions yet!</p>
       `}
     `
 }

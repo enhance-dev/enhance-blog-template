@@ -11,8 +11,8 @@ export default function BlogPaginationButton({ html, state }) {
     <li
       class="
          flex
-         items-center
-         justify-center
+         align-items-center
+         justify-content-center
          font-body
          leading5
          m0
@@ -20,12 +20,12 @@ export default function BlogPaginationButton({ html, state }) {
     >
       ${!active
     ? `<a
-             class="no-underline pl-1 pr-1"
+             class="no-underline pi-1"
              href="/?offset=${parseInt(index, 10) * limit}&limit=${limit}"
            >
             ${label}
           </a>`
-    : `<div class="pl-1 pr-1 font-bold active">
+    : `<div class="pi-1 font-bold active">
                ${label}
              </div>`}
     </li>

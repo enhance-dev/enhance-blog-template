@@ -12,9 +12,9 @@ export default function ({ html, state }) {
         }
       </style>
       <site-layout>
-        <article class="h-entry font-body leading4 m-auto pt0 pb0 pt4-lg pb4-lg">
-          <h1 class="p-name font-heading font-bold mb0 mb4-lg text3 text5-lg tracking-1 leading1">${title}</h1>
-          <p class='date dt-published mb0 mb4-lg'>${published}</p>
+        <article class="h-entry font-body leading4 mi-auto pb0 pb4-lg">
+          <h1 class="p-name font-heading font-bold mbe0 text4 tracking-1 leading1">${title}</h1>
+          <p class='date dt-published mbe4'>${published}</p>
           <section slot="e-content doc">${post.html}</section>
           <section class="p-summary hidden">${description}</section>
           <my-h-card class="hidden"></my-h-card>

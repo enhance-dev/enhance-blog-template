@@ -6,12 +6,12 @@ export default function SiteHeader ({ html }) {
       }
     </style>
     <header>
-      <h1 class='text2 text4-lg font-heading font-bold tracking-1 pt4 pt6-lg pb0 pb2-lg'>
+      <h1 class='text3 font-heading font-bold tracking-1 pbs4 pbe0'>
         <a href='/' class='no-underline'>
           Enhance Blog Template
         </a>
       </h1>
-      <p class='font-body pb4 pb6-lg'>
+      <p class='font-body text0 pbe4'>
         A subtitle for this blog
       </p>
     </header>

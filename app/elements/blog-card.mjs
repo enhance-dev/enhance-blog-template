@@ -16,10 +16,10 @@ export default function BlogPost({ html, state }) {
       }
     </style>
     <a href="${href}" class="no-underline">
-      <article class="pt0 pb0 pt4-lg pb4-lg">
+      <article class="pb2">
         <div class="font-body leading3">
-          <h1 class="font-heading font-bold leading1 text2 text3-lg tracking-1 mb0">${title}</h1>
-          <p class="mb0">${description}</p>
+          <h1 class="font-heading font-bold leading1 text2 tracking-1 mbe0">${title}</h1>
+          <p class="mbe0">${description}</p>
           <p class="text-1 tracking1">
             ${published}<br />
             ${readtime} to read
