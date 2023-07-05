@@ -31,11 +31,12 @@ export async function get(req) {
     docPath += 'index' // trailing slash == index.md file
   }
 
-  const docURL = new URL(`../../blog/${docPath}.md`, import.meta.url)
+  const docURL = new URL(`../../blog${docPath}.md`, import.meta.url)
+  const filePath = process.platform !== 'win32' ? docURL.pathname : docURL.pathname.substring(1, docURL.pathname.length)
 
   let docMarkdown
   try {
-    docMarkdown = readFileSync(docURL.pathname, 'utf-8')
+    docMarkdown = readFileSync(filePath, 'utf-8')
   } catch (_err) {
     console.log(_err)
     return { statusCode: 404 }
