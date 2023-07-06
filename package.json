@@ -20,9 +20,9 @@
     "@aws-sdk/client-sqs": "^3.303.0",
     "@aws-sdk/client-ssm": "^3.303.0",
     "@aws-sdk/lib-dynamodb": "^3.303.0",
-    "@enhance/cli": "^0.0.7",
-    "@enhance/types": "^0.5.0",
-    "eslint": "^8.30.0"
+    "@enhance/cli": "^1.0.3",
+    "@enhance/types": "^0.6.0",
+    "eslint": "^8.44.0"
   },
   "eslintConfig": {
     "env": {
@@ -42,9 +42,9 @@
     }
   },
   "dependencies": {
-    "@architect/functions": "^5.4.0",
+    "@architect/functions": "^6.0.1",
     "@begin/data": "^4.0.2",
-    "@enhance/arc-plugin-enhance": "^6.1.1",
+    "@enhance/arc-plugin-enhance": "^6.1.6",
     "arcdown": "^2.1.1",
     "cheerio": "^1.0.0-rc.12",
     "feed": "^4.2.2",
