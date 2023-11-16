@@ -66,6 +66,8 @@ shared ...................... code shared between app and jobs
 
  ## Deploy to Production
 
+> 🚨 Don't forget to run: `npm run posts` and `npm run rss` to generate the static JSON before deploying.
+
 - [Install](https://begin.com/docs/getting-started/installing-the-begin-cli) the Begin CLI.
 - Login to Begin
 
