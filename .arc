@@ -7,6 +7,7 @@ prune true
 @plugins
 architect/plugin-lambda-invoker
 enhance/arc-plugin-enhance
+enhance/arc-plugin-styles
 create-post-metadata
 create-rss-feed
 

@@ -44,7 +44,8 @@
   "dependencies": {
     "@architect/functions": "^7.0.0",
     "@begin/data": "^4.0.2",
-    "@enhance/arc-plugin-enhance": "^9.1.2",
+    "@enhance/arc-plugin-enhance": "^11.0.0",
+    "@enhance/arc-plugin-styles": "^5.0.5",
     "arcdown": "^2.2.1",
     "cheerio": "^1.0.0-rc.12",
     "feed": "^4.2.2",
